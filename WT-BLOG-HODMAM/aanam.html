@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Focus Carousel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(circle, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 800px;
+            text-align: center;
+        }
+
+        h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .scroller {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            width: 100%;
+            height: 400px;
+            position: relative;
+        }
+
+        .card-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .card {
+            width: 180px;
+            height: 280px;
+            margin: 0 10px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.5s, filter 0.5s, opacity 0.5s;
+            flex-shrink: 0;
+            text-align: center;
+            color: white;
+        }
+
+        .card img {
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+        }
+
+        .card p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        /* Active card gets clear and larger */
+        .card.active {
+            transform: scale(1.3);
+            filter: blur(0px);
+            opacity: 1;
+            z-index: 2;
+        }
+
+        /* Side cards stay slightly blurred and smaller */
+        .card:not(.active) {
+            transform: scale(0.9);
+            filter: blur(5px);
+            opacity: 0.6;
+            z-index: 1;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        button {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Explore Premium Templates</h2>
+        <div class="scroller">
+            <div class="card-container">
+                <div class="card"><img src="https://source.unsplash.com/200x300?nature" alt="1"><p>Nature</p></div>
+                <div class="card"><img src="https://source.unsplash.com/200x300?tech" alt="2"><p>Tech</p></div>
+                <div class="card"><img src="https://source.unsplash.com/200x300?music" alt="3"><p>Spotify</p></div>
+                <div class="card"><img src="https://source.unsplash.com/200x300?ai" alt="4"><p>AI</p></div>
+                <div class="card"><img src="https://source.unsplash.com/200x300?business" alt="5"><p>Business</p></div>
+                <div class="card"><img src="https://source.unsplash.com/200x300?space" alt="6"><p>Space</p></div>
+                <div class="card"><img src="https://source.unsplash.com/200x300?cars" alt="7"><p>Cars</p></div>
+    <script>
+        const cards = document.querySelectorAll('.card');
+        const container = document.querySelector('.card-container');
+        const nextBtn = document.getElementById('next');
+        const prevBtn = document.getElementById('prev');
+        let index = 2; // Start at the center
+
+        function updateCards() {
+            cards.forEach((card, i) => {
+                card.classList.remove('active');
+                if (i === index) {
+                    card.classList.add('active');
+                }
+            });
+            container.style.transform = `translateX(${-index * 200}px)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (index < cards.length - 1) {
+                index++;
+            } else {
+                index = 0;
+            }
+            updateCards();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (index > 0) {
+                index--;
+            } else {
+                index = cards.length - 1;
+            }
+            updateCards();
+        });
+
+        updateCards();
+    </script>
+</body>
+</html>
