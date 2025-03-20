@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bites - Home</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+    <style>
+        /* Internal CSS */
+        .welcome {
+            color: #d35400;
+            text-align: center;
+            font-size: 22px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #d35400;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header style="background-color: #f39c12; padding: 15px; text-align: center; color: white;">
+        <h1>Delicious Bites</h1>
+        <p>Your favorite place for tasty meals!</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <h2>Welcome to Delicious Bites</h2>
+        <p>Enjoy the best food in town with our freshly made meals.</p>
+    </section>
+
+    <!-- Menu Section -->
+    <section>
+        <h2>Our Special Dishes</h2>
+        <table>
+            <tr>
+                <th>Dish</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Margherita Pizza</td>
+                <td>₹299</td>
+            </tr>
+            <tr>
+                <td>Pasta Alfredo</td>
+                <td>₹249</td>
+            </tr>
+            <tr>
+                <td>Chocolate Brownie</td>
+                <td>₹199</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Gallery -->
+    <section>
+        <h2>Gallery</h2>
+        <img src="images/pizza.jpg" alt="Delicious Pizza" width="200">
+        <img src="images/pasta.jpg" alt="Tasty Pasta" width="200">
+        <img src="images/dessert.jpg" alt="Sweet Dessert" width="200">
+    </section>
+
+    <!-- Contact Form -->
+    <section>
+        <h2>Contact Us</h2>
+        <form>
+            <label>Name:</label>
+            <input type="text" placeholder="Enter your name"><br><br>
+
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email"><br><br>
+
+            <label>Message:</label>
+            <textarea placeholder="Your message"></textarea><br><br>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Delicious Bites | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

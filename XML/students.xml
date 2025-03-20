@@ -1,0 +1,13 @@
+<!DOCTYPE students SYSTEM "students.dtd">
+<students>
+    <student>
+        <name>asp</name>
+        <age>22</age>
+        <course>Computer Science</course>
+    </student>
+    <student>
+        <name>ssp</name>
+        <age>21</age>
+        <course>Mathematics</course>
+    </student>
+</students>

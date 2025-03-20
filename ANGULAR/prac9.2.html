@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUR ANGULAR FORM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        input {
+            padding: 5px;
+            font-weight: 500;
+            width: 250px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body ng-app="aditya">
+    <h1>FILL THIS FORM CAREFULLY</h1>
+    <hr>
+    <div ng-controller="users">
+        <br>
+        <label>ENTER YOUR FIRST NAME:</label>
+        <input type="text" ng-model="aa" placeholder="adityaraj">
+        <br><br>
+
+        <label>ENTER YOUR MOBILE NO:</label>
+        <input type="number" ng-model="bb" placeholder="8669792979">
+        <br><br>
+
+        <label>ENTER EMAIL:</label>
+        <input type="email" ng-model="cc" placeholder="aspatil2904@gmail.com">
+        <br><br>
+
+        <label>ENTER PASSWORD:</label>
+        <input type="password" ng-model="dd">
+        <br><br>
+
+        <button ng-click="submitForm()">Submit</button>
+    </div>
+
+    <script>
+        var myApp = angular.module('aditya', []);
+        myApp.controller('users', function($scope) {
+            $scope.aa = "";
+            $scope.bb = "";
+            $scope.cc = "";
+            $scope.dd = "";
+        });
+    </script>
+    <hr>
+</body>
+</html>
