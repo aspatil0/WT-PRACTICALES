@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="employees.xsl"?>
+<!DOCTYPE employees SYSTEM "employees.dtd">
+<employees>
+    <employee id="E001">
+        <name>Mehatab Sanadi</name>
+        <position>Software Engineer</position>
+        <department>IT</department>
+        <salary>70000</salary>
+        <contact>
+            <email>mehatabsanadi94@example.com</email>
+            <phone>+1234567890</phone>
+        </contact>
+    </employee>
+    <employee id="E002">
+        <name>Jane Smith</name>
+        <position>HR Manager</position>
+        <department>Human Resources</department>
+        <salary>80000</salary>
+        <contact>
+            <email>jane.smith@example.com</email>
+            <phone>+0987654321</phone>
+        </contact>
+    </employee>
+    <employee id="E003">
+        <name>Michael Johnson</name>
+        <position>Marketing Specialist</position>
+        <department>Marketing</department>
+        <salary>60000</salary>
+        <contact>
+            <email>michael.johnson@example.com</email>
+            <phone>+1122334455</phone>
+        </contact>
+    </employee>
+    <employee id="E004">
+        <name>Emily Davis</name>
+        <position>Data Analyst</position>
+        <department>Finance</department>
+        <salary>75000</salary>
+        <contact>
+            <email>emily.davis@example.com</email>
+            <phone>+2233445566</phone>
+        </contact>
+    </employee>
+    <employee id="E005">
+        <name>Robert Brown</name>
+        <position>Operations Manager</position>
+        <department>Operations</department>
+        <salary>85000</salary>
+        <contact>
+            <email>robert.brown@example.com</email>
+            <phone>+3344556677</phone>
+        </contact>
+    </employee>
+    <employee id="E006">
+        <name>Lisa Wilson</name>
+        <position>Project Manager</position>
+        <department>IT</department>
+        <salary>90000</salary>
+        <contact>
+            <email>lisa.wilson@example.com</email>
+            <phone>+4455667788</phone>
+        </contact>
+    </employee>
+    <employee id="E007">
+        <name>David Miller</name>
+        <position>Sales Executive</position>
+        <department>Sales</department>
+        <salary>65000</salary>
+        <contact>
+            <email>david.miller@example.com</email>
+            <phone>+5566778899</phone>
+        </contact>
+    </employee>
+    <employee id="E008">
+        <name>Sarah Wilson</name>
+        <position>UI/UX Designer</position>
+        <department>Design</department>
+        <salary>72000</salary>
+        <contact>
+            <email>sarah.wilson@example.com</email>
+            <phone>+6677889900</phone>
+        </contact>
+    </employee>
+    <employee id="E009">
+        <name>James Anderson</name>
+        <position>Quality Analyst</position>
+        <department>IT</department>
+        <salary>68000</salary>
+        <contact>
+            <email>james.anderson@example.com</email>
+            <phone>+7788990011</phone>
+        </contact>
+    </employee>
+    <employee id="E010">
+        <name>Olivia Martin</name>
+        <position>Legal Advisor</position>
+        <department>Legal</department>
+        <salary>88000</salary>
+        <contact>
+            <email>olivia.martin@example.com</email>
+            <phone>+8899001122</phone>
+        </contact>
+    </employee>
+</employees>
